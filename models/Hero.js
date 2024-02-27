@@ -5,6 +5,9 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class Hero extends Model {
     static associate(models) {
+      Hero.hasMany(models.HeroImage, {
+        foreignKey: 'heroId'
+      });
       Hero.belongsToMany(models.Superpower, {
         through: 'heroes_to_superpowers',
         foreignKey: 'heroId'
