@@ -1,9 +1,14 @@
 POST http://localhost:5002/api/heroes/ HTTP/1.1
-Content-Type: application/json
+Content-Type: multipart/form-data
 
 {
-    "nickname": "Ironman",
-    "realName": "Tony Stark",
-    "originDescription": "He grew up selfish and busty child in need of fathers love, untill one day he was captured and had to figure something out. Well, that something was made of steel and blasters ahahaha.",
-    "catchPhrase": "Mysteries await!"
+    "nickname": "Me",
+    "realName": "D!MA",
+    "originDescription": "Admin",
+    "catchPhrase": "GOGOGOGO",
+    "powers": {
+        "name": "fly",
+        "description": "Can fly for 20 minutes straight",
+        "rate": 15
+    }
 }
